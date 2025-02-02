@@ -1,0 +1,19 @@
+.centered-vh-vw {
+  display: flex;
+  height: 100vh;
+  color: aliceblue;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+/*# sourceMappingURL=style.css.map */
