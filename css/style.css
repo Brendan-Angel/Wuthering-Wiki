@@ -1,6 +1,6 @@
-.centered-vh-vw {
+.centered-column {
   display: flex;
-  height: 100vh;
+  flex-direction: column;
   color: aliceblue;
   justify-content: center;
   align-items: center;
@@ -13,7 +13,13 @@
 }
 
 body {
+  width: 100%;
+  height: 100vh;
   background-color: black;
+}
+body div {
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

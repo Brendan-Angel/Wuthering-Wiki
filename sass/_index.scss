@@ -1,6 +1,6 @@
-.centered-vh-vw {
+.centered-column {
     display: flex;
-    height: 100vh;
+    flex-direction: column;
     color: aliceblue;
     justify-content: center;
     align-items: center;
