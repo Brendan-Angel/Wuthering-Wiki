@@ -1,0 +1,19 @@
+/* WEBKIT PARTIAL */
+body {
+    font-family: "Rubik", serif;
+    cursor: url(../assets/img/primary-icons/website-cursor.png), auto;
+    a {
+        cursor: url(../assets/img/primary-icons/website-cursor.png), auto;
+    }
+}
+body::-webkit-scrollbar {
+    width: 1vw;
+    background-color: $dark-grey;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: $dark-golden;
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background-color: $golden;
+}

@@ -1,0 +1,16 @@
+/* NEWS PARTIAL */
+// actual-version presentation
+.presentation-news {
+    @extend .presentation-page;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)
+        ),url(../assets/img/actual--version/version-splashscreen/splashscreen-version-2.1.0.jpg);
+    @include bg-composition(no-repeat, cover, left top);
+    @extend .presentation-featured;
+}
+.version-featured-stuff {
+    padding: 5em 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+}

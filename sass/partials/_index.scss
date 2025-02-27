@@ -1,0 +1,42 @@
+/* INDEX PARTIAL */
+/* <-- 1 --> splashscreen */
+.presentation-home {
+    @extend .presentation-page;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.2)
+        ),url(../assets/img/general/home-splashscreen/Morning.png);
+    @include bg-composition(no-repeat, cover, center top);
+    @extend .presentation-featured;
+}
+.asd {
+    width: 100%;
+    height: 800px;
+}
+.__index-sections {
+    padding: 2em 0%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    div {
+        overflow-x: auto;
+        margin: 0% 0.5em;
+        width: 10em;
+        height: auto;
+        border-radius: 5%;
+        overflow: hidden;
+        transform: skewX(-3deg);
+        transition: 0.3s ease-out;
+        img {
+            width: 100%;
+            height: 100%;
+            transform: skewX(0deg);
+            object-fit: cover;
+            opacity: 0.5;
+        }
+    }
+    div:hover {
+        scale: 1.1;
+        transition: 0.3s ease-out;
+    }
+}

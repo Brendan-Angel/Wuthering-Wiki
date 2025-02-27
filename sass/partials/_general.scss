@@ -1,0 +1,184 @@
+/* GENERAL PARTIAL */
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+// body grid
+body {
+    /* custom */
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: $dark-grey;
+    grid-template-areas: "sticky sticky"
+    "header header"
+    "sidebar main"
+    "footer footer";
+    grid-template-rows: repeat(2, auto) 1fr auto;
+    grid-template-columns: auto 1fr;
+}
+.sticky {
+    position: fixed;
+    grid-area: sticky;
+}
+header {
+    grid-area: header;
+}
+aside {
+    grid-area: sidebar;
+}
+main {
+    grid-area: main;
+}
+footer {
+    grid-area: footer;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+// header
+.navbar--after {
+    a {
+        color: $black;
+    }
+    a:hover {
+        color: $golden;
+    }
+    a::after {
+        content: "";
+        display: block;
+        width: 0%;
+        height: 5px;
+        background: linear-gradient(0deg, hsl(40, 58%, 56%) 0%, hsla(32, 33%, 23%, 0) 97%);
+        background: -moz-linear-gradient(0deg, hsl(40, 58%, 56%) 0%, hsla(32, 33%, 23%, 0) 97%);
+        background: -webkit-linear-gradient(0deg, hsl(40, 58%, 56%) 0%, hsla(32, 33%, 23%, 0) 97%);
+        border-radius: 10px;
+    }
+    a:hover::after {
+        width: 100%;
+        transition: 0.3s ease-in-out;
+    }
+}
+// footer
+footer {
+    a {
+        color: $light-grey;
+        transition: 0.3s;
+    }
+    a:hover {
+        color: $golden;
+        transition: 0.3s;
+    }
+    p {
+        transition: 0.5s;
+    }
+    p::after {
+        margin-top: 1em;
+        content: "";
+        display: block;
+        width: 0%;
+        height: 5px;
+        background: linear-gradient(0deg, hsla(32, 33%, 23%, 0) 0%, hsl(40, 58%, 56%) 50%, hsla(32, 33%, 23%, 0)100%);
+        background: -moz-linear-gradient(0deg, hsla(32, 33%, 23%, 0) 0%, hsl(40, 58%, 56%) 50%, hsla(32, 33%, 23%, 0)100%);
+        background: -webkit-linear-gradient(0deg, hsla(32, 33%, 23%, 0) 0%, hsl(40, 58%, 56%) 50%, hsla(32, 33%, 23%, 0)100%);
+        border-radius: 10px;
+    }
+    p:hover::after {
+        width: 100%;
+        transition: 0.7s ease-in-out;
+    }
+
+}
+.footer-custom {
+    position: absolute;
+    overflow: hidden;
+}
+.bg-liston {
+    position: relative;
+    opacity: 0.7;
+    top: 62px;
+    left: -100px;
+    transform: rotate(-45deg);
+}
+@media (min-width: 1024px) {
+    .bg-liston {
+        left: -60px;
+    }
+}
+// input's
+.input-search {
+    text-align: center;
+    padding: 0.8em 0em;
+    color: $dark-golden;
+    border-radius: 15px 0px 0px 15px;
+    font-size: large;
+    border: 3px solid $dark-golden;
+    opacity: 50%;
+    transition: 0.8s;
+}
+.input-search:hover {
+    opacity: 80%;
+    transition: 0.8s;
+}
+.input-button {
+    padding: 0.8em;
+    background-color: $dark-grey;
+    color: $dark-golden;
+    border-radius: 0px 15px 15px 0px;
+    font-size: large;
+    border: 3px solid $dark-golden;
+    opacity: 50%;
+    transition: 0.8s;
+}
+.input-search-two {
+    width: min(80%, 400px);
+    height: 50px;
+    padding: 1em 2.5em 1em 1em;
+    border-radius: 20px;
+    background-color: $dark-grey;
+    transition: 1s;
+    font-size: 18px;
+    color: $white;
+}
+.input-search-two:hover {
+    background-color: $grey;
+    transition: 1s;
+}
+.input-button-two {
+    position: relative;
+    right: 25px;
+    top: -4px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: $golden;
+    color: $white;
+    font-size: 20px;
+    transition: 0.5s;
+}
+.input-button-two:hover {
+    transform: rotate(-270deg);
+    transition: 0.5s ease-out;
+}
+@media (min-width : 769px) {
+    .input-search-two {
+        width: 400px;
+        height: 50px;
+        padding: 1em 3em 1em 1em;
+        border-radius: 20px;
+        background-color: $dark-grey;
+        font-size: 18px;
+        }
+    .input-button-two {
+        right: 45px;
+        top: -4px;
+        width: 60px;
+        height: 60px;
+    }
+}

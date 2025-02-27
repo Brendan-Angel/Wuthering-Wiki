@@ -1,0 +1,31 @@
+/* VARIABLES PARTIAL */
+// colors
+$black: #050505;
+$dark-grey: #131313;
+$grey: #292929;
+$light-grey: #505050;
+$white: #dddddd;
+$brown: #5e4933;
+$darker-golden: #574b34;
+$dark-golden: #91794b;
+$golden: #c4a463;
+// mixin (@include)
+@mixin fixed ($top, $bottom, $left, $right) {
+    position: fixed;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+}
+@mixin sticky ($top, $bottom, $left, $right) {
+    position: relative;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+}
+@mixin bg-composition ($bg-repeat, $bg-size, $bg-position) {
+    background-repeat: $bg-repeat;
+    background-size: $bg-size;
+    background-position: $bg-position;
+}

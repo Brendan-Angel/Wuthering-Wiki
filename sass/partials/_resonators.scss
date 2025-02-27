@@ -1,0 +1,34 @@
+/* RESONATORS PARTIAL */
+/* form customs */
+.search-custom {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+@media (min-width : 426px) {
+    .search-custom {
+        padding: min(1.5em);
+    }
+}
+@media (min-width : 769px) {
+    .search-custom {
+        justify-content: start;
+    }
+}
+.checkbox-section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .option-item {
+        display: block;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        .option-inner {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+        }
+    }
+}
