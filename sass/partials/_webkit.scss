@@ -1,4 +1,7 @@
 /* WEBKIT PARTIAL */
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: "Rubik", serif;
     cursor: url(../assets/img/primary-icons/website-cursor.png), auto;

@@ -28,15 +28,83 @@
         transform: skewX(-3deg);
         transition: 0.3s ease-out;
         img {
+            position: relative;
+            z-index: 0;
             width: 100%;
             height: 100%;
             transform: skewX(0deg);
             object-fit: cover;
+            opacity: 0.3;
+            transition: 0.3s ease-out;
+        }
+        img:hover {
             opacity: 0.5;
+            transition: 0.3s;
+        }
+        h4 {
+            position: absolute;
+            color: $golden;
+            margin: 0%;
+            width: 100%;
+            padding: 0%;
+            top: 40%;
+            text-align: center;
+            text-shadow: $dark-golden 2px 5px 5px;
+            transform: skewX(0deg);
         }
     }
     div:hover {
         scale: 1.1;
         transition: 0.3s ease-out;
+    }
+}
+
+.resonator-preview {
+    height: 100%;
+    .resonator-card {
+        position: relative;
+        border: 2px solid $golden;
+        border-radius: 10%;
+        max-width: 18em;
+        height: 100%;
+        overflow: hidden;
+        .--bg-type {
+            position: absolute;
+            z-index: 0;
+            opacity: 0.8;
+        }
+        .--preview-resonator {
+            z-index: 1;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            mask-image: linear-gradient(black 70%, transparent 98%);
+            transition: 0.4s ease-in-out;
+        }
+        .--preview-resonator:hover {
+            scale: 1.1;
+            transition: 0.4s ease-in-out;
+        }
+        span {
+            position: absolute;
+            font-weight: 500;
+            max-width: 100%;
+            bottom: 10%;
+            right: 8%;
+            text-shadow: $dark-grey 10px 5px 10px;
+        }
+    }
+}
+.resonator-active {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    .--bg-resonator-active {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 }

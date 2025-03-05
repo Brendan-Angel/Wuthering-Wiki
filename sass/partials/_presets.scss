@@ -38,6 +38,9 @@ $color-palette: (
         height: 2rem *$i;
         transition: 0.5s;
     }
+    .f-s-#{$i} {
+        font-size: 1em * $i;
+    }
 }
 //tag's styles
 @for $i from 1 through 5 {

@@ -25,6 +25,7 @@ body {
 }
 header {
     grid-area: header;
+    z-index: 2;
 }
 aside {
     grid-area: sidebar;
@@ -43,8 +44,16 @@ a {
 }
 // header
 .navbar--after {
+    opacity: 0.4;
+    transition: 0.3s ease-out;
+}
+.navbar-nav:hover {
+    opacity: 1;
+    transition: 0.3s ease-out;
+}
+.navbar--after {
     a {
-        color: $black;
+        color: $white;
     }
     a:hover {
         color: $golden;
@@ -53,16 +62,62 @@ a {
         content: "";
         display: block;
         width: 0%;
+        position: relative;
+        left: 50%;
         height: 5px;
-        background: linear-gradient(0deg, hsl(40, 58%, 56%) 0%, hsla(32, 33%, 23%, 0) 97%);
-        background: -moz-linear-gradient(0deg, hsl(40, 58%, 56%) 0%, hsla(32, 33%, 23%, 0) 97%);
-        background: -webkit-linear-gradient(0deg, hsl(40, 58%, 56%) 0%, hsla(32, 33%, 23%, 0) 97%);
+        background: linear-gradient(0deg, hsla(32, 33%, 23%, 0) 0%, hsl(40, 58%, 56%) 50%, hsla(32, 33%, 23%, 0) 100%);
+        background: -moz-linear-gradient(0deg, hsla(32, 33%, 23%, 0) 0%, hsl(40, 42%, 48%) 50%, hsla(32, 33%, 23%, 0) 100%);
+        background: -webkit-linear-gradient(0deg, hsla(32, 33%, 23%, 0) 0%, hsl(40, 58%, 56%) 50%, hsla(32, 33%, 23%, 0) 100%);
         border-radius: 10px;
     }
     a:hover::after {
+        left: 0%;
         width: 100%;
         transition: 0.3s ease-in-out;
     }
+}
+// sidebar
+aside {
+    display: none;
+}
+@media (min-width: 768px) {
+    aside {
+        display: block;
+    }
+}
+.sidebar {
+    @include fixed (12%, "", 0px, "");
+    background-color: rgb($darker-golden, 0.3);
+    z-index: 3;
+    width: 3rem;
+    height: auto;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    .sidebar--custom {
+        height: 100%;
+        background-color: rgb($darker-golden, 0.3);
+        transition: 0.5s ease-out;
+        a {
+            gap: 5px;
+            color: $golden;
+            display: inline-flex;
+            overflow: hidden;
+            padding: 2%;
+            img {
+                width: 3em;
+                height: 3em;
+                filter: invert(61%) sepia(78%) saturate(235%) hue-rotate(2deg) brightness(93%) contrast(89%);
+            }
+        }
+        a:hover {
+            background-color: rgb($darker-golden, 0.8);
+            transition: 0.5s ease-out;
+        }
+    }
+}
+.sidebar:hover {
+    width: 9rem;
+    transition: 0.3s ease-in-out;
 }
 // footer
 footer {
@@ -77,7 +132,12 @@ footer {
     p {
         transition: 0.5s;
     }
+    .footer--after-position {
+        position: relative;
+    }
     p::after {
+        position: absolute;
+        right: 0px;
         margin-top: 1em;
         content: "";
         display: block;
@@ -87,12 +147,13 @@ footer {
         background: -moz-linear-gradient(0deg, hsla(32, 33%, 23%, 0) 0%, hsl(40, 58%, 56%) 50%, hsla(32, 33%, 23%, 0)100%);
         background: -webkit-linear-gradient(0deg, hsla(32, 33%, 23%, 0) 0%, hsl(40, 58%, 56%) 50%, hsla(32, 33%, 23%, 0)100%);
         border-radius: 10px;
+        transition: 0.3s ease-in-out;
     }
     p:hover::after {
+        left: 0px;
         width: 100%;
-        transition: 0.7s ease-in-out;
+        transition: 0.5s ease-in-out;
     }
-
 }
 .footer-custom {
     position: absolute;
